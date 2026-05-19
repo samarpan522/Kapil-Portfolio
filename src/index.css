@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Barlow:wght@300;400;500;600;700&family=Dancing+Script:wght@400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-dark-bg text-white font-sans;
+  font-feature-settings:
+    "kern" 1,
+    "liga" 1;
+}
+
+/* Typography helpers */
+.title-serif {
+  @apply font-serif font-bold;
+}
+
+.label-caps {
+  @apply text-xs font-semibold tracking-wider uppercase;
+}
+
+.spaced-caps {
+  @apply uppercase tracking-widest text-xs font-semibold;
+}
+
+/* Smooth transitions */
+a,
+button,
+[role="button"] {
+  @apply transition-all duration-300 ease-out;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #dc2626;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #991b1b;
+}
+
+/* Grid pattern for backgrounds */
+.grid-pattern {
+  background-image:
+    linear-gradient(rgba(163, 163, 163, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(163, 163, 163, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Red glow effect */
+.red-glow {
+  background: radial-gradient(
+    circle at right,
+    rgba(220, 38, 38, 0.08) 0%,
+    transparent 70%
+  );
+}
+
+/* Pulse animation for indicators */
+@keyframes pulse-subtle {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+.pulse-indicator {
+  animation: pulse-subtle 2s ease-in-out infinite;
+}
+
+/* Performance optimizations */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
