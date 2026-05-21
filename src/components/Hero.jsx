@@ -24,7 +24,7 @@ export function Hero() {
   return (
     <section
       id="hero"
-      className="relative bg-[#0A0A0A] w-full min-h-screen overflow-hidden flex items-center"
+      className="relative bg-white w-full min-h-screen overflow-hidden flex items-center"
     >
       {/* ── BACKGROUND VIDEO ── */}
       <div className="absolute inset-0 z-0">
@@ -38,6 +38,7 @@ export function Hero() {
           <source src={hero} type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-gradient-to-r from-[#0A0A0A] via-[#0A0A0A]/40 to-transparent z-[1]" />
+        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/90 to-transparent z-[1]" />
       </div>
 
       {/* ── TEXT CONTENT ── */}
@@ -58,7 +59,7 @@ export function Hero() {
 
           {/* Headline with flipping word */}
           <h1
-            className="text-white font-serif leading-[0.85] tracking-tighter"
+            className="text-black font-serif leading-[0.85] tracking-tighter"
             style={{ fontSize: "clamp(40px, 6vw, 90px)" }}
           >
             BUILDING SYSTEMS <br /> THAT SHAPE THE <br />
@@ -83,7 +84,10 @@ export function Hero() {
                     duration: 0.55,
                     ease: [0.22, 1, 0.36, 1],
                   }}
-                  style={{ transformOrigin: "50% 50%", display: "inline-block" }}
+                  style={{
+                    transformOrigin: "50% 50%",
+                    display: "inline-block",
+                  }}
                 >
                   {FLIP_WORDS[index]}
                 </motion.span>
@@ -93,7 +97,7 @@ export function Hero() {
 
           {/* Subtext */}
           <p
-            className="text-white/40 font-light max-w-sm"
+            className="text-black/70 font-light max-w-sm"
             style={{ fontSize: "clamp(14px, 1.1vw, 17px)" }}
           >
             Founder of Arch — building scalable ecosystems, digital ventures,
@@ -109,9 +113,9 @@ export function Hero() {
               Explore Vision
             </button>
 
-            <div className="flex flex-col border-l border-white/10 pl-6">
-              <span className="text-white font-serif text-2xl">2026</span>
-              <span className="text-white/20 uppercase text-[9px] tracking-widest">
+            <div className="flex flex-col border-l border-black/10 pl-6">
+              <span className="text-black font-serif text-2xl">2026</span>
+              <span className="text-black/40 uppercase text-[9px] tracking-widest">
                 Strategic Horizon
               </span>
             </div>

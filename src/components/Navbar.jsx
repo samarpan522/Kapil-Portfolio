@@ -82,7 +82,7 @@ export function Navbar() {
       <nav
         className={`fixed top-0 left-0 w-full z-[100] transition-all duration-500 ${
           scrolled
-            ? "bg-black/90 backdrop-blur-xl border-b border-white/10 py-3"
+            ? "bg-white/95 backdrop-blur-xl border-b border-black/10 py-3"
             : "bg-transparent py-6"
         }`}
       >
@@ -91,16 +91,16 @@ export function Navbar() {
           <div className="flex items-center gap-3 shrink-0 group cursor-pointer">
             <div className="relative flex items-center justify-center">
               <div className="w-9 h-9 bg-accent-red rounded-sm rotate-45 group-hover:rotate-[135deg] transition-transform duration-700 ease-in-out" />
-              <span className="absolute text-white font-bold text-xs">K</span>
+              <span className="absolute text-black font-bold text-xs">K</span>
             </div>
             <div className="flex flex-col leading-tight">
               <span
                 onClick={() => scrollToSection("hero")}
-                className="text-lg font-bold tracking-tighter text-white"
+                className="text-lg font-bold tracking-tighter text-black"
               >
                 KAPIL <span className="text-accent-red">GAUTAM</span>
               </span>
-              <span className="text-[9px] uppercase tracking-[0.15em] text-white/40 font-medium">
+              <span className="text-[9px] uppercase tracking-[0.15em] text-black/60 font-medium">
                 FOUNDER OF ARCHPHAZE
               </span>
             </div>
@@ -119,7 +119,7 @@ export function Navbar() {
                   className={`relative text-[10px] 2xl:text-[11px] font-bold uppercase tracking-[0.2em] transition-all duration-300 ${
                     isActive
                       ? "text-accent-red"
-                      : "text-white/60 hover:text-accent-red"
+                      : "text-black/60 hover:text-accent-red"
                   }`}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
@@ -159,13 +159,13 @@ export function Navbar() {
               className="xl:hidden flex flex-col gap-1.5 p-2 z-[110]"
             >
               <span
-                className={`h-0.5 bg-white transition-all duration-300 ${isOpen ? "w-6 rotate-45 translate-y-2" : "w-8"}`}
+                className={`h-0.5 bg-black transition-all duration-300 ${isOpen ? "w-6 rotate-45 translate-y-2" : "w-8"}`}
               />
               <span
-                className={`h-0.5 bg-white transition-all duration-300 ${isOpen ? "opacity-0" : "w-6"}`}
+                className={`h-0.5 bg-black transition-all duration-300 ${isOpen ? "opacity-0" : "w-6"}`}
               />
               <span
-                className={`h-0.5 bg-white transition-all duration-300 ${isOpen ? "w-6 -rotate-45 -translate-y-2" : "w-8"}`}
+                className={`h-0.5 bg-black transition-all duration-300 ${isOpen ? "w-6 -rotate-45 -translate-y-2" : "w-8"}`}
               />
             </button>
           </div>
@@ -179,7 +179,7 @@ export function Navbar() {
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ type: "spring", damping: 25, stiffness: 200 }}
-              className="fixed inset-0 bg-black/98 backdrop-blur-2xl z-[105] flex items-center justify-center xl:hidden"
+              className="fixed inset-0 bg-white z-[105] flex items-center justify-center xl:hidden"
             >
               <div className="flex flex-col gap-6 text-center py-20 overflow-y-auto">
                 {NAV_LINKS.map((link, i) => {
@@ -196,7 +196,7 @@ export function Navbar() {
                       className={`text-3xl font-serif italic transition-colors ${
                         isActive
                           ? "text-accent-red"
-                          : "text-white hover:text-accent-red"
+                          : "text-black hover:text-accent-red"
                       }`}
                     >
                       {link}

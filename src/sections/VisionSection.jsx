@@ -22,7 +22,7 @@ export function VisionSection() {
   ];
 
   return (
-    <section id="vision" ref={ref} className="py-32 md:py-40 bg-dark-bg">
+    <section id="vision" ref={ref} className="py-32 md:py-40 bg-white">
       <div className="max-w-7xl mx-auto px-8">
         <motion.div
           initial="hidden"
@@ -41,7 +41,7 @@ export function VisionSection() {
           <motion.h2
             custom={1}
             variants={fadeUpVariants}
-            className="title-serif text-white text-5xl md:text-6xl"
+            className="title-serif text-black text-5xl md:text-6xl"
           >
             Designing What’s Next
           </motion.h2>
@@ -49,7 +49,7 @@ export function VisionSection() {
           <motion.p
             custom={2}
             variants={fadeUpVariants}
-            className="font-sans font-light text-text-gray leading-relaxed max-w-2xl text-lg"
+            className="font-sans font-light text-black/70 leading-relaxed max-w-2xl text-lg"
           >
             At Archphaze, we build technology that connects human needs with
             intelligent systems. We focus on creating scalable, reliable, and
@@ -65,12 +65,12 @@ export function VisionSection() {
             {visionItems.map((item, i) => (
               <div
                 key={item.title}
-                className="border border-white border-opacity-10 p-8 rounded-lg"
+                className="border border-black/10 p-8 rounded-lg"
               >
                 <h3 className="font-serif font-bold text-accent-red text-xl mb-3">
                   {item.title}
                 </h3>
-                <p className="text-text-gray font-light">{item.desc}</p>
+                <p className="text-black/70 font-light">{item.desc}</p>
               </div>
             ))}
           </motion.div>

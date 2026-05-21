@@ -34,7 +34,7 @@ function ImpactCard({ domain, index }) {
       variants={fadeUp}
       custom={index % 3}
       whileHover="hover"
-      className="group relative overflow-hidden rounded-2xl border border-white/[0.08] bg-white/[0.03] p-8 backdrop-blur-sm transition-all duration-500 hover:border-red-600/40 hover:bg-red-600/[0.04]"
+      className="group relative overflow-hidden rounded-2xl border border-black/10 bg-white p-8 shadow-sm transition-all duration-500 hover:border-red-600/40 hover:bg-red-50"
     >
       {/* Top Accent */}
       <motion.span
@@ -50,7 +50,7 @@ function ImpactCard({ domain, index }) {
       </div>
 
       {/* Index */}
-      <span className="absolute right-8 top-6 font-mono text-[10px] tracking-[0.25em] text-white/10">
+      <span className="absolute right-8 top-6 font-mono text-[10px] tracking-[0.25em] text-black/10">
         {String(index + 1).padStart(2, "0")}
       </span>
 
@@ -66,15 +66,15 @@ function ImpactCard({ domain, index }) {
       </div>
 
       {/* Title */}
-      <h3 className="relative z-10 mb-4 font-serif text-2xl text-white group-hover:text-red-500 transition-colors">
+      <h3 className="relative z-10 mb-4 font-serif text-2xl text-black group-hover:text-red-500 transition-colors">
         {domain.title}
       </h3>
 
       {/* Divider */}
-      <div className="mb-6 h-[1px] w-12 bg-white/10 transition-all duration-700 group-hover:w-full group-hover:bg-red-600/20" />
+      <div className="mb-6 h-[1px] w-12 bg-black/10 transition-all duration-700 group-hover:w-full group-hover:bg-red-600/20" />
 
       {/* Description */}
-      <p className="relative z-10 mb-8 text-sm font-light leading-relaxed text-white/50">
+      <p className="relative z-10 mb-8 text-sm font-light leading-relaxed text-black/60">
         {domain.description}
       </p>
 
@@ -117,12 +117,10 @@ export default function ImpactSection() {
   const { ref, isInView } = useReveal();
   const [showAll, setShowAll] = useState(false);
 
-  const visibleDomains = showAll
-    ? IMPACT_DOMAINS
-    : IMPACT_DOMAINS.slice(0, 3);
+  const visibleDomains = showAll ? IMPACT_DOMAINS : IMPACT_DOMAINS.slice(0, 3);
 
   return (
-    <section id="impact" className="relative overflow-hidden bg-[#0A0A0A] py-32">
+    <section id="impact" className="relative overflow-hidden bg-white py-32">
       {/* Background Grid */}
       <div
         className="pointer-events-none absolute inset-0 opacity-[0.03]"
@@ -144,7 +142,10 @@ export default function ImpactSection() {
             animate={isInView ? "visible" : "hidden"}
             className="lg:col-span-7"
           >
-            <motion.div variants={fadeUp} className="mb-8 flex items-center gap-4">
+            <motion.div
+              variants={fadeUp}
+              className="mb-8 flex items-center gap-4"
+            >
               <div className="h-[1px] w-12 bg-red-600" />
               <span className="text-[11px] font-bold uppercase tracking-[0.4em] text-red-600">
                 Systems That Scale Businesses
@@ -153,13 +154,16 @@ export default function ImpactSection() {
 
             <motion.h2
               variants={fadeUp}
-              className="mb-10 font-serif text-5xl leading-[0.9] tracking-tight text-white md:text-7xl"
+              className="mb-10 font-serif text-5xl leading-[0.9] tracking-tight text-black md:text-7xl"
             >
               IMPACT <br />
-              <span className="italic text-white/20">DOMAINS.</span>
+              <span className="italic text-black/20">DOMAINS.</span>
             </motion.h2>
 
-            <motion.p variants={fadeUp} className="max-w-xl text-lg text-white/40">
+            <motion.p
+              variants={fadeUp}
+              className="max-w-xl text-lg text-black/40"
+            >
               Five core disciplines powering Archphaze — engineered for clarity,
               precision, and long-term scalability.
             </motion.p>
@@ -174,11 +178,11 @@ export default function ImpactSection() {
                 { num: "01", label: "Vision" },
               ].map((s, i) => (
                 <motion.div key={s.label} variants={fadeUp} custom={i + 2}>
-                  <div className="font-serif text-4xl text-white">
+                  <div className="font-serif text-4xl text-black">
                     {s.num}
                     <span className="text-red-600">.</span>
                   </div>
-                  <div className="mt-2 text-[9px] uppercase tracking-[0.25em] text-white/30">
+                  <div className="mt-2 text-[9px] uppercase tracking-[0.25em] text-black/40">
                     {s.label}
                   </div>
                 </motion.div>
@@ -188,7 +192,10 @@ export default function ImpactSection() {
         </div>
 
         {/* Cards */}
-        <motion.div layout className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <motion.div
+          layout
+          className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3"
+        >
           <AnimatePresence mode="sync">
             {visibleDomains.map((domain, index) => (
               <ImpactCard key={domain.id} domain={domain} index={index} />
@@ -200,14 +207,14 @@ export default function ImpactSection() {
         <motion.div className="mt-20 flex flex-col items-center gap-10">
           <button
             onClick={() => setShowAll(!showAll)}
-            className="border border-white/10 px-10 py-4 text-[10px] uppercase tracking-[0.3em] text-white/50 transition-all hover:border-red-600 hover:text-red-500"
+            className="border border-black/10 px-10 py-4 text-[10px] uppercase tracking-[0.3em] text-black/60 transition-all hover:border-red-600 hover:text-red-500"
           >
             {showAll ? "Collapse Strategy" : "View All Domains"}
           </button>
 
           <div className="flex w-full items-center justify-between opacity-80">
             <div className="h-[1px] flex-1 bg-white/10" />
-            <span className="px-8 text-[9px] tracking-[0.5em] text-white/40">
+            <span className="px-8 text-[9px] tracking-[0.5em] text-black/40">
               ARCHPHAZE — 2026
             </span>
             <div className="h-[1px] flex-1 bg-white/10" />

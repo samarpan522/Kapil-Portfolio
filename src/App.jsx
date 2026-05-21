@@ -50,14 +50,14 @@ const ContactSection = lazy(() =>
 
 // Loading component
 const SectionLoader = () => (
-  <div className="py-32 md:py-40 bg-dark-bg flex items-center justify-center">
+  <div className="py-32 md:py-40 bg-white flex items-center justify-center">
     <div className="w-8 h-8 border-2 border-accent-red border-t-transparent rounded-full animate-spin"></div>
   </div>
 );
 
 function App() {
   return (
-    <div className="bg-dark-bg overflow-x-hidden">
+    <div className="bg-white overflow-x-hidden">
       <Navbar />
       <Hero />
       <Suspense fallback={<SectionLoader />}>

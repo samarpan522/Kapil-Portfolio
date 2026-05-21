@@ -43,7 +43,7 @@ export function InsightsSection() {
     <section
       id="insights"
       ref={ref}
-      className="py-32 md:py-48 bg-[#050505] overflow-hidden"
+      className="py-32 md:py-48 bg-white overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-8 md:px-12">
         <motion.div
@@ -67,10 +67,10 @@ export function InsightsSection() {
             <motion.h2
               custom={1}
               variants={fadeUpVariants}
-              className="font-serif text-white text-5xl md:text-7xl lg:text-8xl font-light leading-[0.9] tracking-tighter"
+              className="font-serif text-black text-5xl md:text-7xl lg:text-8xl font-light leading-[0.9] tracking-tighter"
             >
               INSIGHTS <br />
-              <span className="italic text-white/20">& IDEAS.</span>
+              <span className="italic text-black/20">& IDEAS.</span>
             </motion.h2>
           </div>
 
@@ -81,27 +81,27 @@ export function InsightsSection() {
                 key={insight.title}
                 custom={i + 2}
                 variants={fadeUpVariants}
-                className="group relative p-8 md:p-10 border border-white/5 bg-white/[0.02] hover:bg-white/[0.03] hover:border-red-600/20 transition-all duration-500"
+                className="group relative p-8 md:p-10 border border-black/10 bg-gray-50 hover:bg-white transition-all duration-500"
               >
                 <div className="flex justify-between items-start mb-12">
                   <span className="text-red-600 text-[10px] tracking-[0.3em] font-bold">
                     {insight.date}
                   </span>
-                  <div className="w-2 h-2 border-t border-r border-white/10 group-hover:border-red-600 transition-colors" />
+                  <div className="w-2 h-2 border-t border-r border-black/10 group-hover:border-red-600 transition-colors" />
                 </div>
 
-                <h3 className="font-serif text-white text-xl md:text-2xl leading-tight mb-6 group-hover:text-red-500 transition-colors duration-300">
+                <h3 className="font-serif text-black text-xl md:text-2xl leading-tight mb-6 group-hover:text-red-500 transition-colors duration-300">
                   {insight.title}
                 </h3>
 
                 {/* Excerpt with improved tracking and leading for readability */}
-                <p className="text-white/40 font-light text-sm leading-relaxed tracking-wide">
+                <p className="text-black/60 font-light text-sm leading-relaxed tracking-wide">
                   {insight.excerpt}
                 </p>
-                
+
                 {/* Background Watermark Index */}
-                <div className="absolute right-6 bottom-8 text-6xl font-serif italic text-white/[0.02] pointer-events-none group-hover:text-red-600/[0.03] transition-colors duration-500">
-                   0{i + 1}
+                <div className="absolute right-6 bottom-8 text-6xl font-serif italic text-black/[0.02] pointer-events-none group-hover:text-red-600/[0.03] transition-colors duration-500">
+                  0{i + 1}
                 </div>
               </motion.div>
             ))}

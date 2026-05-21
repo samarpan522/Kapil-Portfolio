@@ -4,9 +4,9 @@ export default {
   theme: {
     extend: {
       colors: {
-        "dark-bg": "#0A0A0A",
-        "light-bg": "#F5F4F2",
-        "text-gray": "#A3A3A3",
+        "dark-bg": "#FFFFFF",
+        "light-bg": "#F8F8F6",
+        "text-gray": "#4B5563",
         "accent-red": "#DC2626",
       },
       fontFamily: {
