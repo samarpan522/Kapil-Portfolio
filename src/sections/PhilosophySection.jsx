@@ -67,7 +67,7 @@ export function PhilosophySection() {
                 whileHover={{ y: -4 }}
                 whileTap={{ scale: 0.98 }}
               >
-                <span className="relative z-10">Read My Story —</span>
+                <span className="relative z-10 text-black">Read My Story —</span>
                 <div className="absolute inset-0 bg-accent-red scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500 ease-out" />
               </motion.button>
             </motion.div>

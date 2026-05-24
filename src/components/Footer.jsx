@@ -4,7 +4,7 @@ import { FaLinkedinIn, FaXTwitter, FaGithub } from "react-icons/fa6";
 import { MdOutlineEmail, MdArrowUpward } from "react-icons/md";
 
 const SOCIALS = [
-  { icon: FaLinkedinIn, href: "#", label: "LinkedIn" },
+  { icon: FaLinkedinIn, href: "https://www.linkedin.com/in/kapil-gautam-416a74134/", label: "LinkedIn" },
   { icon: FaXTwitter, href: "#", label: "Twitter" },
   { icon: FaGithub, href: "#", label: "GitHub" },
   { icon: MdOutlineEmail, href: "mailto:kapil@archphaze.com", label: "Email" },
